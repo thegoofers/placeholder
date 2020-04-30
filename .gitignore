@@ -1,2 +1,4 @@
 .DS_Store
 /node_modules
+placeholder.code-workspace
+/.next
