@@ -6,7 +6,7 @@ export default function Home() {
     <Layout>
       <Container>
         <PetBox>
-          <Pet src='/sprites/spritey.png' />
+          <Pet />
         </PetBox>
       </Container>
     </Layout>
@@ -26,11 +26,13 @@ const PetBox = styled.div`
   height: fit-content;
 `
 
-const Pet = styled.img`
+const Pet = styled.div`
   height: 200px;
   width: 200px;
-`
-
-const Something = styled.div`
-  color: red;
+  background: url('/sprites/spritey.png') no-repeat left center;
+  background-size: cover;
+  @keyframes play {
+    100% { background-position: -400px; }
+  }
+  animation: play 1s steps(2) infinite;
 `
